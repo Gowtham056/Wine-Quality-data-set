@@ -1,0 +1,9 @@
+ from google.colab import drive
+drive.mount('/content/drive',force_remount=True)
+ import pandas
+df1=pandas.read_csv('/content/drive/My Drive/ML AS_1/winequality.csv')
+print(df1)
+import matplotlib.pyplot as plt
+plt.ylabel("Frequency")
+plt.xlabel("Quality Labels")
+df1['quality'].value_counts().plot.bar()
